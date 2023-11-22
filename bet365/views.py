@@ -3,7 +3,9 @@ from django.http import HttpRequest, HttpResponse
 
 
 def bet365_view(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("Aqui você encontra alguns insights sobre as bets feitas dentro do site da bet365")
+    context= {"text": "Aqui tem alguns insights sobre as bets feitas na casa de apostas da bet365", 'title': 'bet365 Home Page'}
+    return render(request, 'bet365/home.html', context = context)
 
 def bets(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("Aqui você encontra todas as bets já feitas na bet365")
+    context= {"text": "Aqui tem todas as bets já realizadas na bet365", 'title': 'bet365 All bets'}
+    return render(request, 'bet365/bet365.html', context = context)

@@ -1,7 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpRequest
 
-# Create your views here.
+
+
 # function based views
 def home_view(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("Página inicial <br>do projeto das <b>bets</b>")
+    context = {"text": "Página incial do projeto das bets porém feito com context. FODA!"}
+    return render(
+        request,
+        "home/index.html",
+        
+        context=context,
+    )

@@ -1,0 +1,10 @@
+{% include "global/partials/head.html" %}
+{% include "global/partials/menu.html" %}
+        <h1>{% block texto %}Formato padrão da página{% endblock texto %}</h1>
+    <main class="content">
+       {% block posts %}{% endblock posts %}
+    </main>
+
+    {% include "global/partials/paragrafo.html" %}
+    </body>
+</html>
