@@ -1,5 +1,6 @@
 # flake8: noqa
 from .contact_views import *
+from .contact_forms import *
 print('pasta das views importada')
 # agora se pode usar tudo que está dentro de contact_views como:
 # from .views import index

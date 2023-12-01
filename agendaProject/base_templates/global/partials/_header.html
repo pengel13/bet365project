@@ -21,7 +21,7 @@
     <div class="search">
         <form action={% url "contact:search" %} mehtod='GET'>
             <input type="text" class="search-input" placeholder="Search"
-                id="Search" name='q'>
+                id="Search" name='q' value={{ search_value }}>
         </form>
     </div>
 </header>
