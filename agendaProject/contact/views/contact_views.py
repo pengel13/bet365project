@@ -69,8 +69,10 @@ def search(request: HttpRequest) -> HttpResponse:
 
 def contact(request: HttpRequest, id: int) -> HttpResponse:
     single_contact = Contact.objects.filter(id=id, show=True).first()
+
     if single_contact is None:
         raise Http404("ID não existe ou está invisível")
+
     title = f"{single_contact.first_name} {single_contact.last_name}"
     # metódo django.shortcuts.get_object_or_404
     context = {"contact": single_contact, "site_title": title}  # type: ignore
